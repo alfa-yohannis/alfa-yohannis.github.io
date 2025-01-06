@@ -32,6 +32,32 @@
     html {
       scroll-behavior: smooth;
     }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      header,
+      footer,
+      nav {
+        display: none;
+      }
+
+      section {
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      a[href]:after {
+        content: " (" attr(href) ")";
+      }
+    }
   </style>
 </head>
 
@@ -44,8 +70,8 @@
   <nav class="flex justify-center bg-white shadow-md py-4 sticky top-0 z-10">
     <a href="#bio" class="mx-4 text-gray-700 hover:text-accent transition">Bio</a>
     <a href="#experience" class="mx-4 text-gray-700 hover:text-accent transition">Experience</a>
-    <a href="#education" class="mx-4 text-gray-700 hover:text-accent transition">Education</a>
     <a href="#publications" class="mx-4 text-gray-700 hover:text-accent transition">Publications</a>
+    <a href="#education" class="mx-4 text-gray-700 hover:text-accent transition">Education</a>
     <a href="#other" class="mx-4 text-gray-700 hover:text-accent transition">Other</a>
     <a href="#contact" class="mx-4 text-gray-700 hover:text-accent transition">Contact</a>
   </nav>
@@ -97,16 +123,17 @@
         <em>Linux Learning Centre Semarang (7 months)</em><br>
         <p>Taught Basic Linux concepts and administration.</p>
       </div>
-      <p class="mt-4 text-lg">
-        For more details, visit:
-        <a href="https://www.linkedin.com/in/alfayohannis" target="_blank" class="text-accent hover:underline">
-          LinkedIn Profile
-        </a>
+      <p class="mt-4 text-lg"></p>
+      For more details, visit:
+      <a href="https://www.linkedin.com/in/alfayohannis" target="_blank" class="text-accent hover:underline">
+        LinkedIn Profile
+      </a>
       </p>
   </section>
 
+
   <section id="publications" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Selected Publications</h2>
+    <h2 class="text-3xl font-semibold mb-4">Publications</h2>
     <div class="space-y-4">
       <div class="p-4 bg-white shadow-md rounded-md">
         <strong>1. Defining gamification: From lexical meaning and process viewpoint towards a gameful
@@ -169,16 +196,3 @@
   </section>
 
   <section id="contact" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-    <p class="text-lg">Email: <a href="mailto:alfa.ryano@pradita.ac.id"
-        class="text-accent-600 hover:underline">alfa.ryano@pradita.ac.id</a></p>
-    <p class="text-lg">LinkedIn: <a href="https://linkedin.com/in/alfayohannis"
-        class="text-accent-600 hover:underline">linkedin.com/in/alfayohannis</a></p>
-  </section>
-
-  <footer class="text-center py-4 mt-8 bg-primary text-white shadow-md">
-    <p>&copy; 2024 Alfa Yohannis. All Rights Reserved.</p>
-  </footer>
-</body>
-
-</html>
