@@ -2,197 +2,228 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alfa Yohannis - CV</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3B82F6',
-            secondary: '#F3F4F6',
-            accent: '#60A5FA'
-          },
-          animation: {
-            fadeIn: 'fadeIn 1s ease-in-out'
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' }
-            }
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Alfa Yohannis</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
         }
-      }
-    }
-  </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
 
-    @media print {
-      body {
-        background: white;
-        color: black;
-      }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
 
-      header,
-      footer,
-      nav {
-        display: none;
-      }
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
 
-      section {
-        page-break-inside: avoid;
-      }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-      a {
-        color: black;
-        text-decoration: none;
-      }
+        header h1 {
+            font-size: 2em;
+        }
 
-      a[href]:after {
-        content: " (" attr(href) ")";
-      }
-    }
-  </style>
+        header p {
+            font-size: 1.1em;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .content {
+            margin-left: 10px;
+        }
+
+        .job-title {
+            font-weight: bold;
+        }
+
+        .date {
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-secondary text-gray-800">
-  <header class="bg-primary text-white text-center py-6">
-    <h1 class="text-4xl font-bold">Alfa Yohannis</h1>
-    <p class="text-lg">Researcher | Educator | Software Engineer</p>
-  </header>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alfa Yohannis</h1>
+            <p>Researcher | Educator | Software Engineer</p>
+        </header>
 
-  <nav class="flex justify-center bg-white shadow-md py-4 sticky top-0 z-10">
-    <a href="#bio" class="mx-4 text-gray-700 hover:text-accent transition">Bio</a>
-    <a href="#experience" class="mx-4 text-gray-700 hover:text-accent transition">Experience</a>
-    <a href="#publications" class="mx-4 text-gray-700 hover:text-accent transition">Publications</a>
-    <a href="#education" class="mx-4 text-gray-700 hover:text-accent transition">Education</a>
-    <a href="#other" class="mx-4 text-gray-700 hover:text-accent transition">Other</a>
-    <a href="#contact" class="mx-4 text-gray-700 hover:text-accent transition">Contact</a>
-  </nav>
+        <section id="contacts">
+            <h2 class="section-title">Contacts</h2>
+            <div class="content">
+                <li><b>Location</b>: Tangerang, Indonesia</li>
+                <li><b>Email</b>: alfa_ryano[at]yahoo.co.uk</li>
+                <li><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/alfayohannis"
+                        style="color: #333;">https://www.linkedin.com/in/alfayohannis</a></li>
+                <li><b>GitHub</b>: <a href="https://github.com/alfa-yohannis"
+                        style="color: #333;">https://github.com/alfa-yohannis</a></li>
+                <li><b>Google Scholar</b>: <a href="https://scholar.google.com/citations?user=yO1zNfQAAAAJ"
+                        style="color: #333;">https://scholar.google.com/citations?user=yO1zNfQAAAAJ</a></li>
+            </div>
+        </section>
 
-  <section id="bio" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Biography</h2>
-    <p class="text-lg">Alfa Yohannis is an experienced researcher and educator specializing in software engineering,
-      model-driven development, and gamification in education. With years of academic and professional experience, Alfa
-      has contributed to advancing knowledge in software modeling and algorithm visualization.</p>
-  </section>
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="content">
+                <li><strong>Programming Languages:</strong> Java, Python (advanced), Javascript, CSS, HTML (intermediate), Rust, Elixir (beginner)</li>
+                <li><strong>Web Frameworks:</strong> Spring Boot (intermediate), Phoenix Framework (beginner)</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, Microsoft SQL Server (intermediate)</li>
+                <li><strong>Model-Driven Development Tools:</strong> Epsilon, Eclipse Modeling Framework (advanced), Xtext (intermediate)</li>
+                <li><strong>Other Tools:</strong> Docker, Git, GitFlow, LaTeX, Microsoft Business Intelligence, Solidity, Ganache, Interledger, Ripple, Maven, Android, MxGraph, Elk Layout Engine</li>
+            </div>
+        </section>
 
-  <section id="experience" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Work Experience</h2>
-    <div class="space-y-4">
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Lecturer (Current)</strong><br>
-        <em>Pradita University · Full-time (2+ years)</em><br>
-        <p>I design and teach IT Strategy, Programming Fundamentals, and supervise final projects.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Knowledge Transfer Partnerships (KTP) Associate</strong><br>
-        <em>Leonardo · Full-time (1 year)</em><br>
-        <p>Developing a components visualisation system for defense product development.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Research Staff</strong><br>
-        <em>University of York · Full-time (4 years)</em><br>
-        <p>Research Fellow focusing on model-driven engineering, decentralized applications, blockchain donations, and
-          model visualization.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Lecturer</strong><br>
-        <em>Kalbis Institute · Full-time (10 years)</em><br>
-        <p>Taught Mobile Programming, Algorithms, OOP, and Software Engineering. Conducted research on gamification.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Technical Consultant</strong><br>
-        <em>PT. Sterling Tulus Cemerlang · Full-time (3 years)</em><br>
-        <p>Developed SAP Business One AddOns, business intelligence solutions, and mobile applications.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Freelance Software Engineer</strong><br>
-        <em>Freelance (2 years)</em><br>
-        <p>Developed inter-branch sales system, SMS gateway, health laboratory system, and credit information
-          system.</p>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Teacher</strong><br>
-        <em>Linux Learning Centre Semarang (7 months)</em><br>
-        <p>Taught Basic Linux concepts and administration.</p>
-      </div>
-      <p class="mt-4 text-lg"></p>
-      For more details, visit:
-      <a href="https://www.linkedin.com/in/alfayohannis" target="_blank" class="text-accent hover:underline">
-        LinkedIn Profile
-      </a>
-      </p>
-  </section>
+        <section id="bio">
+            <h2 class="section-title">Biography</h2>
+            <div class="content"></div>
+            <p>Hello! I’m Alfa Yohannis, a lecturer at Pradita University in Indonesia. My research spans various
+                fields, including Model-Driven Engineering, Software Engineering, Information Systems, Gamification,
+                Decentralized Systems, Blockchain, and Computer Science Education. I earned my PhD from the University
+                of York, UK, where I also served as a research fellow for 4 years. Prior to my doctoral studies, I
+                gained extensive experience as a software developer and lecturer, specializing in business software
+                development and higher education.</p>
+        </section>
 
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="content">
+                <p class="job-title">Universitas Pradita - Lecturer (Current) <span class="date">2 yrs 10 mos ·
+                        Tangerang,
+                        Banten, Indonesia</span></p>
+                <p>I design and teach several courses, such as IT Strategy and Planning, Programming Fundamentals,
+                    Software
+                    Architecture, Web Application Development, and Object-oriented Programming. <b>Tools:</b> Java,
+                    Swing,
+                    JavaFX, Maven, Elixir, Phoenix Framework, MySQL, PostgreSQL, TOGAF 9, LaTex.</p>
 
-  <section id="publications" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Publications</h2>
-    <div class="space-y-4">
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>1. Defining gamification: From lexical meaning and process viewpoint towards a gameful
-          reality</strong><br>
-        <em>2014 International Conference on Information Technology Systems and Innovation</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>2. Sort attack: Visualization and gamification of sorting algorithm learning</strong><br>
-        <em>2015 International Conference on Games and Virtual Worlds for Serious Applications</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>3. Turning models inside out</strong><br>
-        <em>CEUR Workshop Proceedings</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>4. Towards efficient comparison of change-based models</strong><br>
-        <em>Journal of Object Technology</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>5. Towards model-based bias mitigation in machine learning</strong><br>
-        <em>25th International Conference on Model Driven Engineering Languages and Systems</em>
-      </div>
+                <p class="job-title">Leonardo Ltd - Knowledge Transfer Partnerships (KTP) Associate <span class="date">1
+                        yr
+                        · Edinburgh, Scotland, United Kingdom</span></p>
+                <p>Developed a components visualization system to support streamlining the defense system development.
+                    The
+                    system works by transforming EMF models created using XText to HTML, JavaScript, and CSS. The system
+                    uses ELK.JS to automate the layout of the components. <b>Tools:</b> Java, CSS, HTML, Epsilon,
+                    Eclipse
+                    Modeling Framework, JavaScript, MxGraph, Elk Layout Engine.</p>
+
+                <p class="job-title">University of York - Research Staff <span class="date">4 yrs 4 mos · York, England,
+                        United Kingdom</span></p>
+                <p>Worked on the applications of Model-Driven Engineering on several problems, such as peer-to-peer
+                    decentralized applications, donations via blockchain, model-based ethical bias mitigation on machine
+                    learning, and incremental models. <b>Tools:</b> Java, Spring Boot, CSS, HTML, JavaScript, Epsilon,
+                    Eclipse Modeling Framework, IBM AI 360, Ripple, XRP, Ethereum, Solidity, Docker, LaTex.</p>
+
+                <p class="job-title">Kalbis Institute - Lecturer <span class="date">10 yrs 1 mo · Jakarta</span></p>
+                <p>Designed and lectured in Mobile Programming, Algorithms, Object-oriented Programming, and Software
+                    Engineering with research on gamification. <b>Tools:</b> Java, MySQL, Android, LibGDX.</p>
+
+                <p class="job-title">PT Sterling Tulus Cemerlang - Technical Consultant <span class="date">3 yrs 3 mos ·
+                        Jakarta</span></p>
+                <p>Developed SAP Business One AddOns, costing simulations, and mobile solutions. <b>Tools:</b> Java,
+                    Spring,
+                    BIRT, Visual Basic.Net, C#, MySQL, Microsoft SQL, Microsoft Business Intelligence, Microsoft SSIS.
+                </p>
+
+                <p class="job-title">Freelance Software Engineer <span class="date">2 yrs 7 mos</span></p>
+                <p>Developed inter-branch sales systems, SMS gateways, and laboratory systems. <b>Tools:</b> PHP,
+                    CakePHP,
+                    Delphi, Visual Basic, MySQL.</p>
+
+                <p class="job-title">Teacher <span class="date">7 mos</span></p>
+                <p>Taught Basic Linux concepts and administration. <b>Tools:</b> Linux.</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            <div class="content">
+                <p><strong>1. Defining gamification: From lexical meaning and process viewpoint towards a gameful
+                        reality</strong><br><em>2014 International Conference on Information Technology Systems and
+                        Innovation</em></p>
+                <p><strong>2. Sort attack: Visualization and gamification of sorting algorithm
+                        learning</strong><br><em>2015
+                        International Conference on Games and Virtual Worlds for Serious Applications</em></p>
+                <p><strong>3. Turning models inside out</strong><br><em>CEUR Workshop Proceedings</em></p>
+                <p><strong>4. Towards efficient comparison of change-based models</strong><br><em>Journal of Object
+                        Technology</em></p>
+                <p><strong>5. Towards model-based bias mitigation in machine learning</strong><br><em>25th International
+                        Conference on Model Driven Engineering Languages and Systems</em></p>
+                <p>For a complete list of publications, visit: <a
+                        href="https://scholar.google.com/citations?user=yO1zNfQAAAAJ" style="color: #333;"
+                        target="_blank">Google Scholar Profile</a></p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="content">
+                <p><strong>Doctor of Philosophy in Computer Science</strong><br><em>University of York</em></p>
+                <p><strong>Master of Engineering, Informatics, Information Systems
+                        Concentration</strong><br><em>Institut
+                        Teknologi Bandung</em></p>
+                <p><strong>Bachelor of Engineering, Electrical Engineering, Computer
+                        Concentration</strong><br><em>Universitas Diponegoro</em></p>
+            </div>
+        </section>
+
+        <section id="other">
+            <h2 class="section-title">Other</h2>
+            <p>Photography enthusiast. Explore my photography portfolio: <a href="https://edinburghvibes.pixpa.com/"
+                    style="color: #333;">Edinburgh Vibes</a></p>
+            <p>Also, have a look at my projects: <a href="https://github.com/alfa-yohannis"
+                    style="color: #333;">https://github.com/alfa-yohannis</a></p>
+        </section>
+
     </div>
-    <p class="mt-4 text-lg">
-      For more publications, visit:
-      <a href="https://scholar.google.com/citations?user=yO1zNfQAAAAJ" target="_blank"
-        class="text-accent hover:underline">
-        Google Scholar Profile
-      </a>
-    </p>
-  </section>
+</body>
 
-  <section id="education" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Education</h2>
-    <div class="space-y-4">
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Doctor of Philosophy - PhD, Computer Science</strong><br>
-        <em>University of York</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Master of Engineering, Informatics with a major in Information Systems</strong><br>
-        <em>Institut Teknologi Bandung</em>
-      </div>
-      <div class="p-4 bg-white shadow-md rounded-md">
-        <strong>Bachelor of Engineering, Electrical Engineering with a major in Computer and Informatics</strong><br>
-        <em>Diponegoro University</em>
-      </div>
-    </div>
-  </section>
-
-  <section id="other" class="p-8 animate-fadeIn">
-    <h2 class="text-3xl font-semibold mb-4">Other</h2>
-    <p class="text-lg">Photography is one of my hobbies. Explore my photography portfolio here:
-      <a href="https://edinburghvibes.pixpa.com/" target="_blank" class="text-accent hover:underline">Edinburgh
-        Vibes</a>
-    </p>
-    <p class="text-lg mt-2">You can also check my GitHub projects here:
-      <a href="https://github.com/alfa-yohannis" target="_blank" class="text-accent hover:underline">GitHub Profile</a>
-    </p>
-  </section>
-
-  <section id="contact" class="p-8 animate-fadeIn">
+</html>
